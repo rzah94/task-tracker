@@ -1,25 +1,35 @@
-package ru.rzah;
+package ru.rzah.manager;
 
+import lombok.Getter;
+import ru.rzah.manager.history.HistoryManager;
+import ru.rzah.manager.history.InMemoryHistoryManager;
 import ru.rzah.task.Epic;
+import ru.rzah.task.Status;
 import ru.rzah.task.Subtask;
 import ru.rzah.task.Task;
 
 import java.util.*;
 
-public class Manager {
+public class InMemoryTaskManager implements TaskManager {
 
     private static Integer currentTaskId = 0;
     private static Integer currentSubtaskId = 0;
     private static Integer currentEpicId = 0;
 
-    private Map<Integer, Task> taskMap = new HashMap<>();
-    private Map<Integer, Subtask> subtaskMap = new HashMap<>();
-    private Map<Integer, Epic> epicMap = new HashMap<>();
+    private final Map<Integer, Task> taskMap = new HashMap<>();
+    private final Map<Integer, Subtask> subtaskMap = new HashMap<>();
+    private final Map<Integer, Epic> epicMap = new HashMap<>();
 
+    @Getter
+    private final HistoryManager historyManager;
+
+    public InMemoryTaskManager(HistoryManager historyManager) {
+        this.historyManager = historyManager;
+    }
 
     // ---- Task (begin) ---
-
     // Создание Task
+    @Override
     public Task createTask(Task task) {
         if (task == null) {
             throw new NullPointerException("task is null");
@@ -30,21 +40,30 @@ public class Manager {
     }
 
     // Получение всех Task
+    @Override
     public List<Task> getAllTasks() {
         return new ArrayList<>(taskMap.values());
     }
 
     // Удаление всех Task
+    @Override
     public void deleteAllTasks() {
         taskMap.clear();
     }
 
     // Получить Task по Id
+    @Override
     public Task getTaskById(int id) {
-        return taskMap.get(id);
+        var task = taskMap.get(id);
+        if (task == null) {
+            return null;
+        }
+        historyManager.addTask(task);
+        return task;
     }
 
     // Обновление Task
+    @Override
     public Task updateTask(Task task) {
         if (task == null || task.getId() == null) {
             throw new NullPointerException("task is null");
@@ -64,6 +83,7 @@ public class Manager {
     // ---- Epic (begin) ---
 
     // Создание Epic
+    @Override
     public Epic createEpic(Epic epic) {
         if (epic == null) {
             throw new NullPointerException("Epic is null");
@@ -76,21 +96,30 @@ public class Manager {
     }
 
     //Получение всех
+    @Override
     public List<Epic> getAllEpics() {
         return new ArrayList<>(epicMap.values());
     }
 
     //Удаление всех
+    @Override
     public void deleteAllEpic() {
         epicMap.clear();
     }
 
     //Получить Epic по Id
+    @Override
     public Epic getEpicById(int id) {
-        return epicMap.get(id);
+        var epic = epicMap.get(id);
+        if (epic == null) {
+            return null;
+        }
+        historyManager.addTask(epic);
+        return epic;
     }
 
     // Обновление Epic
+    @Override
     public Epic updateEpic(Epic epic) {
         if (epic == null || epic.getId() == null) {
             throw new NullPointerException("epic is null");
@@ -105,6 +134,7 @@ public class Manager {
     // ---- subtask (begin) ---
 
     // Создать subtask
+    @Override
     public Subtask createSubtask(Integer epicId, Subtask subtask) {
         if (epicId == null || subtask == null) {
             throw new NullPointerException("epicId / subtask are null");
@@ -128,21 +158,30 @@ public class Manager {
     }
 
     // Получение всех subtask
+    @Override
     public List<Subtask> getAllSubtasks() {
         return new ArrayList<>(subtaskMap.values());
     }
 
     // Удаление всех subtask
+    @Override
     public void deleteAllSubtasks() {
         subtaskMap.clear();
     }
 
     // Получить subtask по Id
+    @Override
     public Subtask getSubtaskById(int id) {
-        return subtaskMap.get(id);
+        var subtask = subtaskMap.get(id);
+        if (subtask == null) {
+            return null;
+        }
+        historyManager.addTask(subtask);
+        return subtask;
     }
 
     // Обновление subtask
+    @Override
     public Subtask updateSubtask(Subtask subtask) {
         if (subtask == null || subtask.getId() == null) {
             throw new NullPointerException("epic is null");
@@ -162,7 +201,7 @@ public class Manager {
         }
 
         // Epic переданного subtask отличается от текущего
-        if (subtask.getEpicId() != currentEpic.getId()) {
+        if (!Objects.equals(subtask.getEpicId(), currentEpic.getId())) {
             throw new RuntimeException("Нельзя изменять epic у subtasks");
         }
 

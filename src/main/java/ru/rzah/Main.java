@@ -1,14 +1,16 @@
 package ru.rzah;
 
+import ru.rzah.manager.InMemoryTaskManager;
+import ru.rzah.manager.Managers;
 import ru.rzah.task.Epic;
+import ru.rzah.task.Status;
 import ru.rzah.task.Subtask;
 import ru.rzah.task.Task;
 
 public class Main {
     public static void main(String[] args) {
 
-        var manager = new Manager();
-
+        var manager = Managers.getDefault();
 
         var task1 = manager.createTask(new Task("Task-1", "d Task-1"));
         var task2 = manager.createTask(new Task("Task-2", "d Task-2"));
@@ -16,6 +18,24 @@ public class Main {
         task2.setStatus(Status.IN_PROGRESS);
         task2 = manager.updateTask(task2);
 
+        System.out.println(manager.getTaskById(task1.getId()));
+        System.out.println(manager.getTaskById(task2.getId()));
+
+        manager.getTaskById(task2.getId());
+        manager.getTaskById(task2.getId());
+        manager.getTaskById(task2.getId());
+        manager.getTaskById(task2.getId());
+        manager.getTaskById(task2.getId());
+        manager.getTaskById(task2.getId());
+        manager.getTaskById(task2.getId());
+        manager.getTaskById(task2.getId());
+        manager.getTaskById(task2.getId());
+        manager.getTaskById(task2.getId());
+        manager.getTaskById(task2.getId());
+
+        System.out.println(manager.getHistoryManager().getHistory());
+
+        System.exit(1);
 
 
         var epic1 = manager.createEpic(new Epic("Epic-1", "d Epic-1"));

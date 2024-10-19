@@ -4,27 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93723675-9af2-4209-9ed8-a5d490a5abe7" name="Changes" comment="feat: сделать 3 вида tasks, управление ими через менеджер" />
+    <list default="true" id="93723675-9af2-4209-9ed8-a5d490a5abe7" name="Changes" comment="feat: сделать 3 вида tasks, управление ими через менеджер">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/Managers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/TaskManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/history/HistoryManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/history/InMemoryHistoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/InMemoryTaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/task/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/task/Task.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/rzah94/task-tracker/",
-    "accountId": "6054c24f-908c-4577-9f15-a645df05be82"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/rzah94/task-tracker/&quot;,
+    &quot;accountId&quot;: &quot;6054c24f-908c-4577-9f15-a645df05be82&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "main",
+    "Application.Main.executor": "Run",
+    "git-widget-placeholder": "feature/add-history",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>

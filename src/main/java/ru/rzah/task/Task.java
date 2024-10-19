@@ -3,7 +3,6 @@ package ru.rzah.task;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import ru.rzah.Status;
 
 @Getter
 @Setter
