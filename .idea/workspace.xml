@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93723675-9af2-4209-9ed8-a5d490a5abe7" name="Changes" comment="feat: сделать 3 вида tasks, управление ими через менеджер">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/FileBackedTaskManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/mapper/EpicMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/mapper/SubtaskMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/mapper/TaskMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/InMemoryTaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/InMemoryTaskManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/history/HistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/history/HistoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/history/InMemoryHistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/history/InMemoryHistoryManager.java" afterDir="false" />
-    </list>
+    <list default="true" id="93723675-9af2-4209-9ed8-a5d490a5abe7" name="Changes" comment="feat: сделать 3 вида tasks, управление ими через менеджер" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
