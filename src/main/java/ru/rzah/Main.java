@@ -1,7 +1,10 @@
 package ru.rzah;
 
-import ru.rzah.manager.InMemoryTaskManager;
+import ru.rzah.manager.FileBackedTaskManager;
 import ru.rzah.manager.Managers;
+import ru.rzah.manager.mapper.EpicMapper;
+import ru.rzah.manager.mapper.SubtaskMapper;
+import ru.rzah.manager.mapper.TaskMapper;
 import ru.rzah.task.Epic;
 import ru.rzah.task.Status;
 import ru.rzah.task.Subtask;
@@ -9,6 +12,26 @@ import ru.rzah.task.Task;
 
 public class Main {
     public static void main(String[] args) {
+
+        var historyManager = Managers.getDefaultHistory();
+        FileBackedTaskManager taskManager = new FileBackedTaskManager(historyManager);
+
+        taskManager.loadFromFile();
+
+        System.out.println(taskManager.getAllTasks());
+        System.out.println(taskManager.getAllEpics());
+
+        System.exit(0);
+
+        var testTask1 = taskManager.createTask(new Task("Task-1", "d Task-1"));
+        var testTask2 = taskManager.createTask(new Task("Task-2", "d Task-2"));
+
+
+
+
+
+
+        System.exit(0);
 
         var manager = Managers.getDefault();
 

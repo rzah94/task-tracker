@@ -16,9 +16,9 @@ public class InMemoryTaskManager implements TaskManager {
     private static Integer currentSubtaskId = 0;
     private static Integer currentEpicId = 0;
 
-    private final Map<Integer, Task> taskMap = new HashMap<>();
-    private final Map<Integer, Subtask> subtaskMap = new HashMap<>();
-    private final Map<Integer, Epic> epicMap = new HashMap<>();
+    protected final Map<Integer, Task> taskMap = new HashMap<>();
+    protected final Map<Integer, Subtask> subtaskMap = new HashMap<>();
+    protected final Map<Integer, Epic> epicMap = new HashMap<>();
 
     @Getter
     private final HistoryManager historyManager;

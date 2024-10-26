@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93723675-9af2-4209-9ed8-a5d490a5abe7" name="Changes" comment="feat: сделать 3 вида tasks, управление ими через менеджер">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/Managers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/TaskManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/history/HistoryManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/history/InMemoryHistoryManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/FileBackedTaskManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/mapper/EpicMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/mapper/SubtaskMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/mapper/TaskMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/InMemoryTaskManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/task/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/task/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/InMemoryTaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/InMemoryTaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/history/HistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/history/HistoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/history/InMemoryHistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rzah/manager/history/InMemoryHistoryManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,26 +37,102 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rzah94&quot;
+  }
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/rzah94/task-tracker/&quot;,
     &quot;accountId&quot;: &quot;6054c24f-908c-4577-9f15-a645df05be82&quot;
   }
 }</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2ngv68w4ZK7WGuQwhmE0WJjUW72" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "git-widget-placeholder": "feature/add-history",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.task-tracker [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.task-tracker [compile].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/delete-repeat-history&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.38390803&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.rzah.manager.mapper" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.rzah.Main" />
+      <module name="task-tracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.rzah.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93723675-9af2-4209-9ed8-a5d490a5abe7" name="Changes" comment="feat: сделать 3 вида tasks, управление ими через менеджер" />
+      <created>1729407359999</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729407359999</updated>
+      <workItem from="1729407361550" duration="3178000" />
+      <workItem from="1729485353147" duration="544000" />
+      <workItem from="1729487609632" duration="23000" />
+      <workItem from="1729575233807" duration="1500000" />
+      <workItem from="1729657937495" duration="1825000" />
+      <workItem from="1729663858112" duration="22000" />
+      <workItem from="1729748445927" duration="309000" />
+      <workItem from="1729748811268" duration="6455000" />
+      <workItem from="1729830902550" duration="1630000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
